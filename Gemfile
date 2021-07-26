@@ -66,3 +66,7 @@ gem 'json'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'twilio-ruby'
+gem 'pry'
+gem 'gmail'
+
+gem 'libreconv'

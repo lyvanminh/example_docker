@@ -185,3 +185,1750 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/oauth2callback?code=4/0AX4XfWgKr_IGljcSt0mkr6NyqyS9HN7NAuO3CGcq7oWMJuSvGqSa85KXQnq4CdoSqBsQsw&scope=https://mail.google.com/%20https://www.googleapis.com/auth/gmail.send" for 222.252.31.150 at 2021-07-21 02:03:26 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.6) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "test_app" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6066091960525837800)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateTokens (20210720153318)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "tokens" ("id" bigserial primary key, "access_token" character varying, "refresh_token" character varying, "expires_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210720153318_create_tokens.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210720153318"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-21 02:04:47.311736"], ["updated_at", "2021-07-21 02:04:47.311736"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6066091960525837800)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/oauth2callback?code=4/0AX4XfWj-hRbrXuWLrt3DXcsAZcl6K1bW_EPIcSjCizku3cxLkAtN9v2Z34aJ8awvHYHdQQ&scope=https://mail.google.com/%20https://www.googleapis.com/auth/gmail.send" for 222.252.31.150 at 2021-07-21 02:05:14 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/oauth2callback"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/oauth2callback?code=4/0AX4XfWh8GpUOEf6Ip9VRvcT3OTSgvFEKE-i6vWjEzAnX8A-DuicrB08u5UbEwmsVC2amhQ&scope=https://mail.google.com/%20https://www.googleapis.com/auth/gmail.send" for 222.252.31.150 at 2021-07-21 02:06:03 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWh8GpUOEf6Ip9VRvcT3OTSgvFEKE-i6vWjEzAnX8A-DuicrB08u5UbEwmsVC2amhQ", "scope"=>"https://mail.google.com/ https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:4:in `create'
+Started GET "/oauth2callback?code=4/0AX4XfWh8GpUOEf6Ip9VRvcT3OTSgvFEKE-i6vWjEzAnX8A-DuicrB08u5UbEwmsVC2amhQ&scope=https://mail.google.com/%20https://www.googleapis.com/auth/gmail.send" for 222.252.31.150 at 2021-07-21 02:06:36 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWh8GpUOEf6Ip9VRvcT3OTSgvFEKE-i6vWjEzAnX8A-DuicrB08u5UbEwmsVC2amhQ", "scope"=>"https://mail.google.com/ https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:5:in `create'
+Started GET "/oauth2callback?code=4/0AX4XfWhxcQJ5zvmeutBjL9Iup2MMaNrnmjNBJ6Ey8-r3RyQK1lHYjy0b0Rl6qAkCxj9v_Q&scope=https://mail.google.com/%20https://www.googleapis.com/auth/gmail.send" for 222.252.31.150 at 2021-07-21 02:07:07 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWhxcQJ5zvmeutBjL9Iup2MMaNrnmjNBJ6Ey8-r3RyQK1lHYjy0b0Rl6qAkCxj9v_Q", "scope"=>"https://mail.google.com/ https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:5:in `create'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:31:48 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:32:11 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to' for #<SessionsController:0x00007fc4242568f0>
+Did you mean?  t):
+  
+app/controllers/sessions_controller.rb:9:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:32:57 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to' for #<SessionsController:0x00007fc424efe580>
+Did you mean?  t):
+  
+app/controllers/sessions_controller.rb:9:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:33:22 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `redirect' for #<SessionsController:0x00007fc420dcdcc8>
+Did you mean?  redirect_to):
+  
+app/controllers/sessions_controller.rb:9:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:33:33 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Redirected to https://7ff07d884baa.ngrok.io/oauth2callback
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/sessions_controller.rb:11:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:34:36 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Redirected to https://7ff07d884baa.ngrok.io/oauth2callback
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fc424bc8780>
+Did you mean?  try):
+  
+app/controllers/sessions_controller.rb:11:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:34:52 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- pry):
+  
+app/controllers/sessions_controller.rb:5:in `<main>'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:34:59 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Redirected to https://7ff07d884baa.ngrok.io/oauth2callback
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fc42194fb00>
+Did you mean?  try):
+  
+app/controllers/sessions_controller.rb:11:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 02:35:28 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Redirected to https://7ff07d884baa.ngrok.io/oauth2callback
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/sessions_controller.rb:12:in `index'
+Started GET "/create" for 172.19.0.1 at 2021-07-21 03:02:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/oauth2callback" for 172.19.0.1 at 2021-07-21 03:02:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (No client_secrets.json filename supplied and/or could not be found in search path.):
+  
+app/controllers/sessions_controller.rb:20:in `create'
+Started GET "/oauth2callback" for 172.19.0.1 at 2021-07-21 03:02:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (No client_secrets.json filename supplied and/or could not be found in search path.):
+  
+app/controllers/sessions_controller.rb:21:in `create'
+Started GET "/oauth2callback" for 172.19.0.1 at 2021-07-21 03:06:04 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Redirect URI must be an absolute URI.):
+  
+app/controllers/sessions_controller.rb:23:in `create'
+Started GET "/oauth2callback" for 172.19.0.1 at 2021-07-21 03:06:45 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to' for #<SessionsController:0x000055f517ed26e8>
+Did you mean?  t):
+  
+app/controllers/sessions_controller.rb:28:in `create'
+Started GET "/oauth2callback" for 172.19.0.1 at 2021-07-21 03:07:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://7ff07d884baa.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWi16XzE-9zO9_a4tV_d7K8h68j1fDJrIUyylramqdEbOulFw202BPCQxQRiHJsCFQ&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 03:07:07 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWi16XzE-9zO9_a4tV_d7K8h68j1fDJrIUyylramqdEbOulFw202BPCQxQRiHJsCFQ", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to' for #<SessionsController:0x00007fc424e44590>
+Did you mean?  t):
+  
+app/controllers/sessions_controller.rb:34:in `create'
+Started GET "/oauth2callback?code=4%2F0AX4XfWi16XzE-9zO9_a4tV_d7K8h68j1fDJrIUyylramqdEbOulFw202BPCQxQRiHJsCFQ&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 03:08:03 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWi16XzE-9zO9_a4tV_d7K8h68j1fDJrIUyylramqdEbOulFw202BPCQxQRiHJsCFQ", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.0ms)
+
+
+  
+Signet::AuthorizationError (Authorization failed.  Server message:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}):
+  
+app/controllers/sessions_controller.rb:31:in `create'
+Started GET "/create" for 172.19.0.1 at 2021-07-21 03:08:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/create" for 172.19.0.1 at 2021-07-21 03:08:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2021-07-21 03:08:22 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Redirected to http://localhost:3000/oauth2callback
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/sessions_controller.rb:13:in `index'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 03:08:44 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://7ff07d884baa.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWgIadefqGuvrfBOozWui0n50FeN2YEXjJzWi8NFuZweCFo_JiBK0zge4gizWjtyeg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 03:08:47 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWgIadefqGuvrfBOozWui0n50FeN2YEXjJzWi8NFuZweCFo_JiBK0zge4gizWjtyeg", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://7ff07d884baa.ngrok.io
+Completed 302 Found in 232ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:08:48 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (unknown keyword: :raw):
+  
+app/controllers/sessions_controller.rb:16:in `new'
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:09:18 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (unknown keyword: :raw):
+  
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:09:52 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+401
+#<HTTP::Message:0x00007fc425eba2a8 @http_header=#<HTTP::Message::Headers:0x00007fc425eba3e8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1525c URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=401, @reason_phrase="Unauthorized", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["WWW-Authenticate", "Bearer realm=\"https://accounts.google.com/\""], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:09:52 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc425871a18>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc425eba8e8 @body="{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"errors\": [\n      {\n        \"message\": \"Login Required.\",\n        \"domain\": \"global\",\n        \"reason\": \"required\",\n        \"location\": \"Authorization\",\n        \"locationType\": \"header\"\n      }\n    ],\n    \"status\": \"UNAUTHENTICATED\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error Unauthorized
+Error - #<Google::Apis::AuthorizationError: Unauthorized>
+
+Retrying after authentication failure
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::AuthorizationError (Unauthorized):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:10:09 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+401
+#<HTTP::Message:0x00007fc4243f14a8 @http_header=#<HTTP::Message::Headers:0x00007fc4243f1458 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x15324 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=401, @reason_phrase="Unauthorized", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["WWW-Authenticate", "Bearer realm=\"https://accounts.google.com/\""], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:10:09 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc42436c370>, not_before=2021-06-28 03:28:12 UTC, not_after=2021-09-20 03:28:11 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc4243f1278 @body="{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"errors\": [\n      {\n        \"message\": \"Login Required.\",\n        \"domain\": \"global\",\n        \"reason\": \"required\",\n        \"location\": \"Authorization\",\n        \"locationType\": \"header\"\n      }\n    ],\n    \"status\": \"UNAUTHENTICATED\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error Unauthorized
+Error - #<Google::Apis::AuthorizationError: Unauthorized>
+
+Retrying after authentication failure
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::AuthorizationError (Unauthorized):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:10:37 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+401
+#<HTTP::Message:0x00007fc425fa2f58 @http_header=#<HTTP::Message::Headers:0x00007fc425fa2f30 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x153ec URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=401, @reason_phrase="Unauthorized", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["WWW-Authenticate", "Bearer realm=\"https://accounts.google.com/\""], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:10:37 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc42569be50>, not_before=2021-06-28 03:28:12 UTC, not_after=2021-09-20 03:28:11 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc425fa2eb8 @body="{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"errors\": [\n      {\n        \"message\": \"Login Required.\",\n        \"domain\": \"global\",\n        \"reason\": \"required\",\n        \"location\": \"Authorization\",\n        \"locationType\": \"header\"\n      }\n    ],\n    \"status\": \"UNAUTHENTICATED\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error Unauthorized
+Error - #<Google::Apis::AuthorizationError: Unauthorized>
+
+Retrying after authentication failure
+Completed 500 Internal Server Error in 338ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::AuthorizationError (Unauthorized):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 03:13:28 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://7ff07d884baa.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWhh4yS-Up2-TPJZDbs4oiRQTiLVR69xTVvG-Cw9uP3DqXqwBIY-WCQ-sM5wQvFnkQ&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 03:13:34 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWhh4yS-Up2-TPJZDbs4oiRQTiLVR69xTVvG-Cw9uP3DqXqwBIY-WCQ-sM5wQvFnkQ", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://7ff07d884baa.ngrok.io
+Completed 302 Found in 280ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:13:35 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+401
+#<HTTP::Message:0x00007fc42c020c40 @http_header=#<HTTP::Message::Headers:0x00007fc42c020c18 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x154dc URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=401, @reason_phrase="Unauthorized", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["WWW-Authenticate", "Bearer realm=\"https://accounts.google.com/\""], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:13:35 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc43001a620>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc42c020b28 @body="{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"errors\": [\n      {\n        \"message\": \"Login Required.\",\n        \"domain\": \"global\",\n        \"reason\": \"required\",\n        \"location\": \"Authorization\",\n        \"locationType\": \"header\"\n      }\n    ],\n    \"status\": \"UNAUTHENTICATED\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error Unauthorized
+Error - #<Google::Apis::AuthorizationError: Unauthorized>
+
+Retrying after authentication failure
+Completed 500 Internal Server Error in 437ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::AuthorizationError (Unauthorized):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:31:24 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:31:32 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP get https://www.googleapis.com/gmail/v1/users/me/messages?
+401
+#<HTTP::Message:0x000055f517874d50 @http_header=#<HTTP::Message::Headers:0x000055f517874c88 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x15fb8 URI:https://www.googleapis.com/gmail/v1/users/me/messages?>, @request_query=nil, @request_absolute_uri=nil, @status_code=401, @reason_phrase="Unauthorized", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["WWW-Authenticate", "Bearer realm=\"https://accounts.google.com/\""], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:31:32 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x000055f517764cd0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x000055f517874ad0 @body="{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"errors\": [\n      {\n        \"message\": \"Login Required.\",\n        \"domain\": \"global\",\n        \"reason\": \"required\",\n        \"location\": \"Authorization\",\n        \"locationType\": \"header\"\n      }\n    ],\n    \"status\": \"UNAUTHENTICATED\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error Unauthorized
+Error - #<Google::Apis::AuthorizationError: Unauthorized>
+
+Retrying after authentication failure
+Completed 500 Internal Server Error in 337ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::AuthorizationError (Unauthorized):
+  
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:32:16 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (unknown keyword: :authorize):
+  
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:32:35 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (unknown keyword: :authorizer):
+  
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:34:31 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `service' for #<SessionsController:0x00007fc422197c40>
+Did you mean?  server):
+  
+app/controllers/sessions_controller.rb:15:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:34:38 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (unknown keyword: :authorizer):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:34:49 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc425f840a8 @http_header=#<HTTP::Message::Headers:0x00007fc425f84080 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x17a84 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:34:49 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc425699ad8>, not_before=2021-06-28 03:28:12 UTC, not_after=2021-09-20 03:28:11 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc425f84008 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Recipient address required\",\n    \"errors\": [\n      {\n        \"message\": \"Recipient address required\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Recipient address required
+Error - #<Google::Apis::ClientError: invalidArgument: Recipient address required>
+
+Completed 500 Internal Server Error in 522ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Recipient address required):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:36:02 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc42c019210 @http_header=#<HTTP::Message::Headers:0x00007fc42c0191e8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x17ffc URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:36:02 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc42c00e7e8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc42c0190f8 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Recipient address required\",\n    \"errors\": [\n      {\n        \"message\": \"Recipient address required\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Recipient address required
+Error - #<Google::Apis::ClientError: invalidArgument: Recipient address required>
+
+Completed 500 Internal Server Error in 533ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Recipient address required):
+  
+app/controllers/sessions_controller.rb:18:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:37:44 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc424d7f128 @http_header=#<HTTP::Message::Headers:0x00007fc424d7f100 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x18574 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:37:44 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc424e53680>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc424d7f088 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Recipient address required\",\n    \"errors\": [\n      {\n        \"message\": \"Recipient address required\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Recipient address required
+Error - #<Google::Apis::ClientError: invalidArgument: Recipient address required>
+
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Recipient address required):
+  
+app/controllers/sessions_controller.rb:18:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:41:38 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SessionsController::Mail):
+  
+app/controllers/sessions_controller.rb:16:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:42:00 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc421a62e98 @http_header=#<HTTP::Message::Headers:0x00007fc421a62e70 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1903c URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:42:01 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4208c4678>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc421a62df8 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid To header\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid To header\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Invalid To header
+Error - #<Google::Apis::ClientError: invalidArgument: Invalid To header>
+
+Completed 500 Internal Server Error in 924ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Invalid To header):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:42:15 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc426a13ed8 @http_header=#<HTTP::Message::Headers:0x00007fc426a13eb0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x195b4 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:42:16 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc426a04cd0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc426a13e38 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid To header\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid To header\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Invalid To header
+Error - #<Google::Apis::ClientError: invalidArgument: Invalid To header>
+
+Completed 500 Internal Server Error in 504ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Invalid To header):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:45:49 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/sessions_controller.rb:13:in `initialize'
+app/controllers/sessions_controller.rb:13:in `new'
+app/controllers/sessions_controller.rb:13:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:46:06 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/sessions_controller.rb:13:in `initialize'
+app/controllers/sessions_controller.rb:13:in `new'
+app/controllers/sessions_controller.rb:13:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:46:15 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Google::APIClient::InstalledAppFlow):
+  
+app/controllers/sessions_controller.rb:17:in `index'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 03:49:30 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://7ff07d884baa.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWhs8OXJ2YTyQas56hBaIadozXvhssoeA62FnE30hT9Xq_OsJpxggt95FhiqZf8tCQ&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 03:49:58 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWhs8OXJ2YTyQas56hBaIadozXvhssoeA62FnE30hT9Xq_OsJpxggt95FhiqZf8tCQ", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://7ff07d884baa.ngrok.io
+Completed 302 Found in 184ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 03:49:59 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc4250c09b8 @http_header=#<HTTP::Message::Headers:0x00007fc4250c0990 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1ab44 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 03:50:00 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc424ca0270>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc4250c0918 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid To header\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid To header\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Invalid To header
+Error - #<Google::Apis::ClientError: invalidArgument: Invalid To header>
+
+Completed 500 Internal Server Error in 527ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Invalid To header):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 04:01:28 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://bf958f8d3c90.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWg9hQzPb2B20WiIxw5TVFzEeiDDY8cSXt1L5hu4H7VYGeh7-XbM5c6W2ed1hedTuA&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 04:01:31 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWg9hQzPb2B20WiIxw5TVFzEeiDDY8cSXt1L5hu4H7VYGeh7-XbM5c6W2ed1hedTuA", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://bf958f8d3c90.ngrok.io
+Completed 302 Found in 232ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:01:32 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `desc' for #<Class:0x00007fc426a5e5c8>):
+  
+app/models/gmail.rb:15:in `<class:Gmail>'
+app/models/gmail.rb:12:in `<module:Samples>'
+app/models/gmail.rb:3:in `<main>'
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:01:52 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (Unable to autoload constant Gmail, expected /app/app/models/gmail.rb to define it):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:02:39 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_messages_send' for #<Google::Apis::GmailV1::GmailService:0x00007fc4252ff238>):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:02:59 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x000055f518119618 @http_header=#<HTTP::Message::Headers:0x000055f5181195c8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1c138 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:03:00 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x000055f51808b8e0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x000055f518119550 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid To header\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid To header\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Invalid To header
+Error - #<Google::Apis::ClientError: invalidArgument: Invalid To header>
+
+Completed 500 Internal Server Error in 860ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Invalid To header):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:05:55 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+400
+#<HTTP::Message:0x00007fc424e48d20 @http_header=#<HTTP::Message::Headers:0x00007fc424e48cf8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1c200 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=400, @reason_phrase="Bad Request", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "application/json; charset=UTF-8"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:05:55 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc424e472e0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc424e48c80 @body="{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid To header\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid To header\",\n        \"domain\": \"global\",\n        \"reason\": \"invalidArgument\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Caught error invalidArgument: Invalid To header
+Error - #<Google::Apis::ClientError: invalidArgument: Invalid To header>
+
+Completed 500 Internal Server Error in 541ms (ActiveRecord: 0.0ms)
+
+
+  
+Google::Apis::ClientError (invalidArgument: Invalid To header):
+  
+app/controllers/sessions_controller.rb:24:in `index'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:07:01 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc41da5c060 @http_header=#<HTTP::Message::Headers:0x00007fc41da5c038 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1c778 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:07:02 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc426cbc4c8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc41da5e130 @body="{\n  \"id\": \"17ac73ed68dc5fa2\",\n  \"threadId\": \"17ac73ed68dc5fa2\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc426c9fdc8
+ @id="17ac73ed68dc5fa2",
+ @label_ids=["SENT"],
+ @thread_id="17ac73ed68dc5fa2">
+
+Completed 406 Not Acceptable in 757ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:10:37 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc4208c03e8 @http_header=#<HTTP::Message::Headers:0x00007fc4208c03c0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1cd04 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:10:38 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc42089ed10>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc4208c0348 @body="{\n  \"id\": \"17ac74222aea5c5b\",\n  \"threadId\": \"17ac74222aea5c5b\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc42089e658
+ @id="17ac74222aea5c5b",
+ @label_ids=["SENT"],
+ @thread_id="17ac74222aea5c5b">
+
+Completed 406 Not Acceptable in 737ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:11:56 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc426abf1c0 @http_header=#<HTTP::Message::Headers:0x00007fc426abf198 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1d290 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:11:57 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc426aaad10>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc426abf120 @body="{\n  \"id\": \"17ac74357814d369\",\n  \"threadId\": \"17ac74357814d369\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc426aaa608
+ @id="17ac74357814d369",
+ @label_ids=["SENT"],
+ @thread_id="17ac74357814d369">
+
+Completed 406 Not Acceptable in 684ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:12:54 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc420ff7f80 @http_header=#<HTTP::Message::Headers:0x00007fc420ff7f30 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1d36c URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:12:54 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4219ac9e0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc420ff7eb8 @body="{\n  \"id\": \"17ac744376d9e9b3\",\n  \"threadId\": \"17ac744376d9e9b3\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc4217cba90
+ @id="17ac744376d9e9b3",
+ @label_ids=["SENT"],
+ @thread_id="17ac744376d9e9b3">
+
+Completed 406 Not Acceptable in 701ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (2.0.4) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.0.4) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.4) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:16:38 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc426a9e8f8 @http_header=#<HTTP::Message::Headers:0x00007fc426a9e8d0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1d95c URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:16:39 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc426a89188>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc426a9e858 @body="{\n  \"id\": \"17ac747a45b429a9\",\n  \"threadId\": \"17ac747a45b429a9\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc426a88ad0
+ @id="17ac747a45b429a9",
+ @label_ids=["SENT"],
+ @thread_id="17ac747a45b429a9">
+
+Redirected to https://bf958f8d3c90.ngrok.io/send_success
+Completed 302 Found in 996ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 04:16:40 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 216ms (Views: 214.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:23:21 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc421392500 @http_header=#<HTTP::Message::Headers:0x00007fc4213924d8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1da88 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:23:22 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4213aa790>, not_before=2021-06-28 03:28:12 UTC, not_after=2021-09-20 03:28:11 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc421392460 @body="{\n  \"id\": \"17ac74dca9f033d6\",\n  \"threadId\": \"17ac74dca9f033d6\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc4213aa0d8
+ @id="17ac74dca9f033d6",
+ @label_ids=["SENT"],
+ @thread_id="17ac74dca9f033d6">
+
+Redirected to https://bf958f8d3c90.ngrok.io/send_success
+Completed 302 Found in 804ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 04:23:23 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 04:25:43 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://bf958f8d3c90.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWgsLaszjrtnhsEaP3utJlXT0WCVs00d49QMQMJLc3b22qDukibmXA_CuQmqVv1e8w&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 04:25:52 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWgsLaszjrtnhsEaP3utJlXT0WCVs00d49QMQMJLc3b22qDukibmXA_CuQmqVv1e8w", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://bf958f8d3c90.ngrok.io
+Completed 302 Found in 247ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:25:53 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc42a1a1e18 @http_header=#<HTTP::Message::Headers:0x00007fc42a1a1df0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1db3c URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:25:53 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc42aa59f38>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc42a1a1d78 @body="{\n  \"id\": \"17ac7501a6d5494b\",\n  \"threadId\": \"17ac7501a6d5494b\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc42aa59880
+ @id="17ac7501a6d5494b",
+ @label_ids=["SENT"],
+ @thread_id="17ac7501a6d5494b">
+
+Redirected to https://bf958f8d3c90.ngrok.io/send_success
+Completed 302 Found in 700ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 04:25:54 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 04:29:07 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://bf958f8d3c90.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWhQh3xyvdVPZHXx8rqzobqFmujTFo6I9BxrgXeDtGKoO2CoXKxMuC0ldMTDufgAxg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 04:29:11 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWhQh3xyvdVPZHXx8rqzobqFmujTFo6I9BxrgXeDtGKoO2CoXKxMuC0ldMTDufgAxg", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://bf958f8d3c90.ngrok.io
+Completed 302 Found in 247ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 04:29:12 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc4142de9b8 @http_header=#<HTTP::Message::Headers:0x00007fc4142de990 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1dbf0 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 04:29:13 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4142e4ae8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc4142de918 @body="{\n  \"id\": \"17ac75325fffaeb0\",\n  \"threadId\": \"17ac75325fffaeb0\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc4142e4430
+ @id="17ac75325fffaeb0",
+ @label_ids=["SENT"],
+ @thread_id="17ac75325fffaeb0">
+
+Redirected to https://bf958f8d3c90.ngrok.io/send_success
+Completed 302 Found in 969ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 04:29:14 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:03:56 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Redirect URI must be an absolute URI.):
+  
+app/controllers/sessions_controller.rb:32:in `create'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:04:33 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Redirect URI must be an absolute URI.):
+  
+app/controllers/sessions_controller.rb:33:in `create'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:04:50 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Redirect URI must be an absolute URI.):
+  
+app/controllers/sessions_controller.rb:34:in `create'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:05:51 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://6925deaf7624.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWgAHenyao2jkDK8ebE76Gh0X8T06rzyeK2eirPM0taZM_bRCdT7qluiorfJixkIJg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:05:55 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWgAHenyao2jkDK8ebE76Gh0X8T06rzyeK2eirPM0taZM_bRCdT7qluiorfJixkIJg", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<SessionsController:0x00007fc420a9ba50>):
+  
+app/controllers/sessions_controller.rb:44:in `create'
+Started GET "/oauth2callback?code=4%2F0AX4XfWgAHenyao2jkDK8ebE76Gh0X8T06rzyeK2eirPM0taZM_bRCdT7qluiorfJixkIJg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:06:08 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWgAHenyao2jkDK8ebE76Gh0X8T06rzyeK2eirPM0taZM_bRCdT7qluiorfJixkIJg", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `uri' for #<SessionsController:0x00007fc421f03e70>
+Did you mean?  URI):
+  
+app/controllers/sessions_controller.rb:32:in `create'
+Started GET "/oauth2callback?code=4%2F0AX4XfWgAHenyao2jkDK8ebE76Gh0X8T06rzyeK2eirPM0taZM_bRCdT7qluiorfJixkIJg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:06:16 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWgAHenyao2jkDK8ebE76Gh0X8T06rzyeK2eirPM0taZM_bRCdT7qluiorfJixkIJg", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.0ms)
+
+
+  
+Signet::AuthorizationError (Authorization failed.  Server message:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}):
+  
+app/controllers/sessions_controller.rb:40:in `create'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:06:28 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://6925deaf7624.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWip2p6tQXuM-G7hgq9x4eb0GlJWfMiciC467jVb7vnRPa7OQIhbBke0f-H3kuPOkQ&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:06:31 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWip2p6tQXuM-G7hgq9x4eb0GlJWfMiciC467jVb7vnRPa7OQIhbBke0f-H3kuPOkQ", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://6925deaf7624.ngrok.io/
+Completed 302 Found in 216ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 06:06:32 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc4142e1bb8 @http_header=#<HTTP::Message::Headers:0x00007fc4142e1b90 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x1ff40 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 06:06:33 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc41453c8b8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc4142e1b18 @body="{\n  \"id\": \"17ac7ac40ba823cc\",\n  \"threadId\": \"17ac7ac40ba823cc\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc41453c200
+ @id="17ac7ac40ba823cc",
+ @label_ids=["SENT"],
+ @thread_id="17ac7ac40ba823cc">
+
+Redirected to https://6925deaf7624.ngrok.io/send_success
+Completed 302 Found in 817ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 06:06:33 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:07:02 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://6925deaf7624.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWhnnGDtlZRqo8Qy1ETIbefOXTper5TktJi8GNeNZcxEgsIjYkyZ3dGBlsJiZhXThQ&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:07:06 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWhnnGDtlZRqo8Qy1ETIbefOXTper5TktJi8GNeNZcxEgsIjYkyZ3dGBlsJiZhXThQ", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://6925deaf7624.ngrok.io/
+Completed 302 Found in 207ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 06:07:06 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc4251211a0 @http_header=#<HTTP::Message::Headers:0x00007fc425121178 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x20030 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 06:07:07 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4213af2b8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc4251210d8 @body="{\n  \"id\": \"17ac7acc75ba41d3\",\n  \"threadId\": \"17ac7acc75ba41d3\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc4213aec00
+ @id="17ac7acc75ba41d3",
+ @label_ids=["SENT"],
+ @thread_id="17ac7acc75ba41d3">
+
+Redirected to https://6925deaf7624.ngrok.io/send_success
+Completed 302 Found in 699ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 06:07:08 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:08:26 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://6925deaf7624.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWjWQc1_ExuVVZclSdiguN8NYYQ1QQYRzPNeQV0t2KkR3Dvda2ih1KvlUCdKi-YIng&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:08:29 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWjWQc1_ExuVVZclSdiguN8NYYQ1QQYRzPNeQV0t2KkR3Dvda2ih1KvlUCdKi-YIng", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://6925deaf7624.ngrok.io/
+Completed 302 Found in 201ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 06:08:30 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc421511110 @http_header=#<HTTP::Message::Headers:0x00007fc4215110e8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x205f8 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 06:08:31 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4214abcc0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc421511048 @body="{\n  \"id\": \"17ac7ae0e993f75f\",\n  \"threadId\": \"17ac7ae0e993f75f\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc4214a8e80
+ @id="17ac7ae0e993f75f",
+ @label_ids=["SENT"],
+ @thread_id="17ac7ae0e993f75f">
+
+Redirected to https://6925deaf7624.ngrok.io/send_success
+Completed 302 Found in 792ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 06:08:31 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:10:30 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://e67bc6767583.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWgu78Wmm09AQNDh8O5pSZZRQ2569FWvWFVwYbJS9LA6ikZb-1k-at1YeE33Yfn15Q&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:10:34 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWgu78Wmm09AQNDh8O5pSZZRQ2569FWvWFVwYbJS9LA6ikZb-1k-at1YeE33Yfn15Q", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://e67bc6767583.ngrok.io/
+Completed 302 Found in 225ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 06:10:35 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc420ad45d0 @http_header=#<HTTP::Message::Headers:0x00007fc420ad45a8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x20bc0 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 06:10:35 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc4219c03c8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc420ad4508 @body="{\n  \"id\": \"17ac7aff4a7b3f28\",\n  \"threadId\": \"17ac7aff4a7b3f28\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc4219acc38
+ @id="17ac7aff4a7b3f28",
+ @label_ids=["SENT"],
+ @thread_id="17ac7aff4a7b3f28">
+
+Redirected to https://e67bc6767583.ngrok.io/send_success
+Completed 302 Found in 834ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 06:10:36 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:16:29 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://e67bc6767583.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWjJ3I-ZmSzxi358TYmINLB-WGW_Ta-obbBb-_wPBPGPLbSG1djJvgSfrHNJbvhGBg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:16:32 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWjJ3I-ZmSzxi358TYmINLB-WGW_Ta-obbBb-_wPBPGPLbSG1djJvgSfrHNJbvhGBg", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://e67bc6767583.ngrok.io/
+Completed 302 Found in 217ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 06:16:33 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc426075db8 @http_header=#<HTTP::Message::Headers:0x00007fc426075d90 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x2119c URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 06:16:33 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc420b06cb0>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc426075d18 @body="{\n  \"id\": \"17ac7b56c3c0eb51\",\n  \"threadId\": \"17ac7b56c3c0eb51\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc420b065f8
+ @id="17ac7b56c3c0eb51",
+ @label_ids=["SENT"],
+ @thread_id="17ac7b56c3c0eb51">
+
+Redirected to https://e67bc6767583.ngrok.io/send_success
+Completed 302 Found in 822ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 06:16:34 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:23:53 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - {"web":{"client_id":"11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com","project_id":"gmail-api-320114","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"AP5lNqurD-cASiVwN0RKgo4s","redirect_uris":["https://e67bc6767583.ngrok.io/oauth2callback"],"javascript_origins":["https://e67bc6767583.ngrok.io"]}}):
+  
+app/controllers/sessions_controller.rb:24:in `create'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:25:03 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/sessions_controller.rb:24:in `new'
+app/controllers/sessions_controller.rb:24:in `create'
+Started GET "/oauth2callback" for 222.252.31.150 at 2021-07-21 06:26:35 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=11317113302-3b6v0ljsbml38356mmufqilnn0ho5n4k.apps.googleusercontent.com&redirect_uri=https://e67bc6767583.ngrok.io/oauth2callback&response_type=code&scope=https://www.googleapis.com/auth/gmail.send
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth2callback?code=4%2F0AX4XfWjRcWWD5dQKBh498-YkbKFWDJDN-ddF_qlTWLFLPp9uJ0O7rVxPdjB1ROfqu4DXKA&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send" for 222.252.31.150 at 2021-07-21 06:26:39 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"4/0AX4XfWjRcWWD5dQKBh498-YkbKFWDJDN-ddF_qlTWLFLPp9uJ0O7rVxPdjB1ROfqu4DXKA", "scope"=>"https://www.googleapis.com/auth/gmail.send"}
+Redirected to https://e67bc6767583.ngrok.io/
+Completed 302 Found in 195ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 222.252.31.150 at 2021-07-21 06:26:39 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Sending HTTP post https://www.googleapis.com/gmail/v1/users/me/messages/send?
+200
+#<HTTP::Message:0x00007fc420aa2c60 @http_header=#<HTTP::Message::Headers:0x00007fc420aa2c38 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x222e0 URI:https://www.googleapis.com/gmail/v1/users/me/messages/send?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Content-Type", "application/json; charset=UTF-8"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Date", "Wed, 21 Jul 2021 06:26:41 GMT"], ["Server", "ESF"], ["Cache-Control", "private"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fc420a948b8>, not_before=2021-06-22 15:25:47 UTC, not_after=2021-09-14 15:25:46 UTC>, @http_body=#<HTTP::Message::Body:0x00007fc420aa2bc0 @body="{\n  \"id\": \"17ac7beb1ed57490\",\n  \"threadId\": \"17ac7beb1ed57490\",\n  \"labelIds\": [\n    \"SENT\"\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::GmailV1::Message:0x00007fc420a94098
+ @id="17ac7beb1ed57490",
+ @label_ids=["SENT"],
+ @thread_id="17ac7beb1ed57490">
+
+Redirected to https://e67bc6767583.ngrok.io/send_success
+Completed 302 Found in 1583ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/send_success" for 222.252.31.150 at 2021-07-21 06:26:42 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#send_success as HTML
+  Rendering sessions/send_success.html.erb within layouts/application
+  Rendered sessions/send_success.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/convert_excel" for 172.19.0.1 at 2021-07-21 07:33:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#convert_excel as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SessionsController::Libreconv):
+  
+app/controllers/sessions_controller.rb:47:in `convert_excel'
+Started GET "/convert_excel" for 172.19.0.1 at 2021-07-21 07:34:10 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- libreconv):
+  
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/convert_excel" for 172.19.0.1 at 2021-07-21 07:34:12 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- libreconv):
+  
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/convert_excel" for 172.19.0.1 at 2021-07-21 07:34:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#convert_excel as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SessionsController::Libreconv):
+  
+app/controllers/sessions_controller.rb:47:in `convert_excel'
+Started GET "/convert_excel" for 172.19.0.1 at 2021-07-21 07:34:43 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#convert_excel as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SessionsController::Libreconv):
+  
+app/controllers/sessions_controller.rb:47:in `convert_excel'
+Started GET "/" for 222.252.31.150 at 2021-07-21 07:35:15 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#index as HTML
+Redirected to https://6533c5723da2.ngrok.io/oauth2callback
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/sessions_controller.rb:7:in `index'
+Started GET "/convert_excel" for 222.252.31.150 at 2021-07-21 07:35:27 +0000
+Cannot render console from 222.252.31.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#convert_excel as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SessionsController::Libreconv):
+  
+app/controllers/sessions_controller.rb:47:in `convert_excel'
+Started GET "/img/everidays_logo.png" for 172.19.0.1 at 2021-07-21 08:06:29 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/img/everidays_logo.png"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
